@@ -65,3 +65,6 @@ net.tcp.buffersize.hsdpa=4094,87380,393216,4096,16384,110208
 
 # Mass storage
 persist.sys.usb.config=mass_storage
+
+# Disable multiuser support
+fw.max_users=1
