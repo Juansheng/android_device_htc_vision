@@ -78,7 +78,6 @@ PRODUCT_COPY_FILES += \
 
 # BT
 PRODUCT_COPY_FILES += \
-    system/bluetooth/data/main.conf:system/etc/bluetooth/main.conf \
     device/htc/vision/configs/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
 
 # Prebuilts
