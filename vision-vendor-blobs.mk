@@ -18,6 +18,11 @@
 PRODUCT_COPY_FILES += \
     device/htc/vision/proprietary/libaudioalsa.so:obj/lib/libaudioalsa.so
 
+# Wireless tethering
+PRODUCT_COPY_FILES += \
+    device/htc/vision/proprietary/hostapd:system/bin/hostapd \
+    device/htc/vision/proprietary/hostapd_cli:system/bin/hostapd_cli
+
 # All the blobs necessary for vision
 PRODUCT_COPY_FILES += \
     device/htc/vision/proprietary/akmd:/system/bin/akmd \
