@@ -95,7 +95,7 @@ PRODUCT_PACKAGES += gps.vision lights.vision sensors.vision
 PRODUCT_PACKAGES += Development Email SoundRecorder SpareParts Stk su
 
 # CM packages
-PRODUCT_PACKAGES += Apollo CMFileManager Superuser
+PRODUCT_PACKAGES += Superuser
 
 # Publish that we support the live wallpaper feature
 PRODUCT_COPY_FILES += \
