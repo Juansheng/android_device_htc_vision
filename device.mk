@@ -84,6 +84,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/vision/prebuilt/zImage:kernel \
     device/htc/vision/prebuilt/bcmdhd.ko:system/lib/modules/bcmdhd.ko \
+    device/htc/vision/prebuilt/libsurfaceflinger_client.so:system/lib/libsurfaceflinger_client.so \
     device/htc/vision/prebuilt/sysinit:system/bin/sysinit \
     device/htc/vision/prebuilt/init.d/20fixup:system/etc/init.d/20fixup \
     device/htc/vision/prebuilt/init.d/90userinit:system/etc/init.d/90userinit
@@ -124,5 +125,5 @@ $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 # we have enough storage space to hold precise GC data (dalvik.vm.dexopt-flags=m=y)
 PRODUCT_TAGS += dalvik.gc.type-precise
 
-# Non-open source blobs (Camera, Adreno etc)
-$(call inherit-product, device/htc/vision/vision-vendor-blobs.mk)
+# Non-open source proprietaries (Camera, Adreno etc)
+$(call inherit-product-if-exists, vendor/htc/vision/vision-vendor-blobs.mk)
