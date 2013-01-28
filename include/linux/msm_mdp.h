@@ -272,10 +272,8 @@ struct msmfb_writeback_data {
 	struct msmfb_img img;
 };
 
-#define MDP_PP_OPS_ENABLE 0x1
 #define MDP_PP_OPS_READ 0x2
 #define MDP_PP_OPS_WRITE 0x4
-#define MDP_PP_OPS_DISABLE 0x8
 
 struct mdp_qseed_cfg {
 	uint32_t table_num;
@@ -357,14 +355,11 @@ struct mdp_histogram {
 
 /*
 
-	mdp_block_type defines the identifiers for pipes in MDP 4.3 and up
+	mdp_block_type defines the identifiers for each of pipes in MDP 4.3
 
 	MDP_BLOCK_RESERVED is provided for backward compatibility and is
 	deprecated. It corresponds to DMA_P. So MDP_BLOCK_DMA_P should be used
 	instead.
-
-	MDP_LOGICAL_BLOCK_DISP_0 identifies the display pipe which fb0 uses,
-	same for others.
 
 */
 
@@ -380,9 +375,6 @@ enum {
 	MDP_BLOCK_DMA_S,
 	MDP_BLOCK_DMA_E,
 	MDP_BLOCK_OVERLAY_2,
-	MDP_LOGICAL_BLOCK_DISP_0 = 0x1000,
-	MDP_LOGICAL_BLOCK_DISP_1,
-	MDP_LOGICAL_BLOCK_DISP_2,
 	MDP_BLOCK_MAX,
 };
 
