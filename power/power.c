@@ -187,6 +187,8 @@ static void cm_power_set_interactive(struct power_module *module, int on)
 
 static void cm_power_init(struct power_module *module)
 {
+    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/hispeed_freq",
+                "1024000");
 }
 
 static struct hw_module_methods_t power_module_methods = {
