@@ -1,0 +1,9 @@
+#!/system/bin/sh
+
+KSMDIR="/sys/kernel/mm/ksm"
+
+if [ -d $KSMDIR ]
+then
+    echo 1000 > $KSMDIR/sleep_millisecs
+    echo 1 > $KSMDIR/run
+fi

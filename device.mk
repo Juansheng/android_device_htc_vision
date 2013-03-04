@@ -88,6 +88,7 @@ PRODUCT_COPY_FILES += \
     device/htc/vision/prebuilt/libsurfaceflinger_client.so:system/lib/libsurfaceflinger_client.so \
     device/htc/vision/prebuilt/sysinit:system/bin/sysinit \
     device/htc/vision/prebuilt/init.d/20fixup:system/etc/init.d/20fixup \
+    device/htc/vision/prebuilt/init.d/30ksm:system/etc/init.d/30ksm \
     device/htc/vision/prebuilt/init.d/90userinit:system/etc/init.d/90userinit
 
 # Sensors, GPS, Lights
