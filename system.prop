@@ -69,6 +69,3 @@ persist.sys.usb.config=mass_storage
 
 # Disable multiuser support
 fw.max_users=1
-
-# Dexopt to /data only for CM's dalvik
-dalvik.vm.dexopt-data-only=1
