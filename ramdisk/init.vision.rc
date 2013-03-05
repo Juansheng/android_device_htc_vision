@@ -181,21 +181,3 @@ service bugreport /system/bin/bugmailer.sh -v
 service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p13 /dev/block/mmcblk0p14
     class core
     user root
-
-service htc_ebdlogd /system/bin/htc_ebdlogd -s -k -P 7
-    class core
-    user root
-    disabled
-    oneshot
-
-service htc_ebdlogd_rel /system/bin/htc_ebdlogd -s -k
-    class core
-    user root
-    disabled
-    oneshot
-
-on property:ro.build.tags=test-keys
-    start htc_ebdlogd
-
-on property:ro.build.tags=release-keys
-    start htc_ebdlogd_rel
