@@ -38,16 +38,7 @@ $(call inherit-product, device/htc/vision/device.mk)
 # Bring in all audio files
 include frameworks/base/data/sounds/AllAudio.mk
 
-# Bring in all video files
-$(call inherit-product, frameworks/base/data/videos/VideoPackage2.mk)
-
-# BT config
-PRODUCT_COPY_FILES += \
-    system/bluetooth/data/main.conf:system/etc/bluetooth/main.conf
-
 PRODUCT_RELEASE_NAME := VISION
-
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_vision BUILD_FINGERPRINT=htc_wwe/htc_vision/vision:4.1.1/JRO03C/87995:user/release-keys PRIVATE_BUILD_DESC="4.1.1 AOSP release-keys"
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := full_vision
