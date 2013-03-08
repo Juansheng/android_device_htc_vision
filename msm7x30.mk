@@ -92,9 +92,6 @@ PRODUCT_PACKAGES += \
     make_ext4fs \
     setup_fs
 
-# we have enough storage space to hold precise GC data
-PRODUCT_TAGS += dalvik.gc.type-precise
-
 # use high-density artwork where available
 PRODUCT_LOCALES += hdpi
 

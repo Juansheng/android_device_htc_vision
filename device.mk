@@ -95,10 +95,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += gps.vision lights.vision sensors.vision
 
 # Optional packages
-PRODUCT_PACKAGES += Development Email SoundRecorder SpareParts Stk su
-
-# CM packages
-PRODUCT_PACKAGES += Superuser
+PRODUCT_PACKAGES += Development Email SoundRecorder SpareParts Stk Superuser
 
 # Publish that we support the live wallpaper feature
 PRODUCT_COPY_FILES += \
@@ -126,6 +123,9 @@ $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 
 # we have enough storage space to hold precise GC data (dalvik.vm.dexopt-flags=m=y)
 PRODUCT_TAGS += dalvik.gc.type-precise
+
+# lower the increment
+ADDITIONAL_BUILD_PROPERTIES += dalvik.vm.heapgrowthlimit=36m
 
 # Non-open source proprietaries (Camera, Adreno etc)
 $(call inherit-product-if-exists, vendor/htc/vision/vision-vendor-blobs.mk)
