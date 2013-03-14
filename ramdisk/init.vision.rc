@@ -107,11 +107,6 @@ on boot
     # Increase readahead buffers on MMC devices
     write /sys/block/mmcblk1/queue/read_ahead_kb 1024
 
-    chown root.system /sys/devices/system/cpu/cpufreq/ondemand/boostpulse
-    chmod 664 /sys/devices/system/cpu/cpufreq/ondemand/boostpulse
-    chown root.system /sys/devices/system/cpu/cpufreq/interactive/boostpulse
-    chmod 664 /sys/devices/system/cpu/cpufreq/interactive/boostpulse
-
 on property:sys.boot_completed=1
     write /sys/module/pm2/parameters/idle_sleep_mode 1
 
