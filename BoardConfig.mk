@@ -79,3 +79,7 @@ BOARD_EGL_NEEDS_LEGACY_FB := true
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/vision/bluetooth
 BOARD_BLUEDROID_VENDOR_CONF := device/htc/vision/configs/libbt_vndcfg.txt
+
+# No SDK blobs
+BUILD_EMULATOR_SENSORS_MODULE := false
+BUILD_EMULATOR_GPS_MODULE := false
