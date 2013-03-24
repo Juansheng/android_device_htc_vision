@@ -189,6 +189,9 @@ static void cm_power_init(struct power_module *module)
 {
     sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/hispeed_freq",
                 "1024000");
+    /* Tweak the freq delays for latest Interactive governor */
+    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay",
+                "100000 1200000:20000");
 }
 
 static struct hw_module_methods_t power_module_methods = {
