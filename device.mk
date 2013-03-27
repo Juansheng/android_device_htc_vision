@@ -85,6 +85,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/vision/prebuilt/zImage:kernel \
     device/htc/vision/prebuilt/bcmdhd.ko:system/lib/modules/bcmdhd.ko \
+    device/htc/vision/prebuilt/flash_image:system/bin/flash_image \
     device/htc/vision/prebuilt/libsurfaceflinger_client.so:system/lib/libsurfaceflinger_client.so \
     device/htc/vision/prebuilt/sysinit:system/bin/sysinit \
     device/htc/vision/prebuilt/init.d/20fixup:system/etc/init.d/20fixup \
