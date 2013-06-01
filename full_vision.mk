@@ -35,9 +35,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device
 $(call inherit-product, device/htc/vision/device.mk)
 
-# Bring in all audio files
-include frameworks/base/data/sounds/AllAudio.mk
-
 PRODUCT_RELEASE_NAME := VISION
 
 # Set those variables here to overwrite the inherited values.
